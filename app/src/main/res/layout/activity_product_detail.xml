@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ProductDetailActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addToCart_btn"
+        android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:background="@color/yellow"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="?selectableItemBackground"
+                android:src="@drawable/back_arrow"
+                android:tint="@color/white"
+                android:id="@+id/back_btn"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toolbatText"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/e_commerce"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="@font/open_sans_samibold"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:tint="@color/white"
+                android:layout_alignParentEnd="true"
+                android:background="?selectableItemBackground"
+                android:src="@drawable/cart"
+                android:id="@+id/menu"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/product_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/demo_img"
+        android:scaleType="fitCenter"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/productDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loading_details"
+        android:textSize="14sp"
+        android:fontFamily="@font/open_sans_samibold"
+        android:textStyle="bold|italic"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#F0EEEE"
+            android:layout_marginTop="20dp"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/you_may_also_like"
+                android:textSize="18sp"
+                android:fontFamily="@font/open_sans_bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recent_recView"
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addToCart_btn"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="@string/add_to_cart"
+            android:textStyle="bold"
+            android:fontFamily="@font/open_sans_bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="-3dp"
+            android:layout_marginEnd="-3dp"
+            android:layout_marginBottom="-7dp"
+            android:layout_alignParentBottom="true"
+           android:backgroundTint="@color/yellow"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+</RelativeLayout>

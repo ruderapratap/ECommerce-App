@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "636432051156",
+    "project_id": "ecommerce-40fe6",
+    "storage_bucket": "ecommerce-40fe6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636432051156:android:c550a430e0f6dd0e700441",
+        "android_client_info": {
+          "package_name": "com.ruderarajput.ecommerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636432051156-srgo5hjguu2ec79cng2va8njptu7r9sn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ruderarajput.ecommerce",
+            "certificate_hash": "c673b5ff886cc60a33fc6841fe4340633a089b11"
+          }
+        },
+        {
+          "client_id": "636432051156-2v7ar5vj1bj5lufdv35ldk0j1vevim0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM22ZLLDztfAji8udfo9_ronTSxI347SM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636432051156-2v7ar5vj1bj5lufdv35ldk0j1vevim0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

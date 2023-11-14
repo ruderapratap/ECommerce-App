@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.LoginActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lg1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lottieView"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/open_sans_samibold"
+        android:gravity="center_horizontal"
+        android:text="@string/vastra"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lg3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lg1"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/login_to_your_account"
+        android:textColor="@color/yellow"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_email"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/lg3"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/email"
+        android:textColorHint="#858781"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/yellow"
+        app:boxStrokeWidth="0.1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_samibold"
+            android:textColor="@color/light_black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/txt_email"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/password"
+        android:textColorHint="#858781"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@color/yellow"
+        app:boxStrokeWidth="0.1dp"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:passwordToggleTint="@color/yellow">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_samibold"
+            android:textColor="@color/light_black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lg4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_password"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/or_nsign_up_with"
+        android:textColor="@color/light_black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/lg5"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/lg4"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/googleBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_googlebtn"
+            android:drawableLeft="@drawable/google_ic"
+            android:fontFamily="@font/open_sans_bold"
+            android:paddingLeft="15dp"
+            android:text="@string/google"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/facebookBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_googlebtn"
+            android:drawableLeft="@drawable/facebook_ic"
+            android:fontFamily="@font/open_sans_bold"
+            android:paddingLeft="15dp"
+            android:text="@string/facebook"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginBtn"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/lg5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_btn"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dont_have_anAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginBtn"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/don_t_have_account"
+        android:textColor="@color/yellow"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/spLinear"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_googlebtn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/spCard"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/spDeveloped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/developed_by"
+                android:textColor="@color/light_black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/spName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/open_sans_samibold"
+                android:text="@string/rudera"
+                android:textColor="@color/yellow"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>
